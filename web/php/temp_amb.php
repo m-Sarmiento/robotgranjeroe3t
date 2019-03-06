@@ -11,7 +11,7 @@ $rand = new JardinTable();
 //Leemos la planta que se graficara
 $p = $_GET['planta'];
 //obtenemos la información de la tabla Jardin
-$rawdata = $rand->getTempInfo($p);
+$rawdata = $rand->getTempAmbInfo($p);
 //nos creamos dos arrays para almacenar el tiempo y el valorhumedad
 $timeArray;
 $dataArray;
@@ -43,7 +43,7 @@ chartCPU1 = new Highcharts.StockChart({
         enabled: false
     },
     title: {
-        text: 'Gráfica Temperatura, planta <?php echo $p ?>'
+        text: 'Gráfica Temperatura Ambiente, planta <?php echo $p ?>'
     },
     xAxis: {
         type: 'datetime'

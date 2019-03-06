@@ -331,11 +331,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <p class="paragraph-agileits-w3layouts my-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla ornare
                                                 purus id tempor. Ut non volutpat libero.Donec pellentesque, mi id rhoncus
                                                 sagittis, ipsum augue vehicula elit, nec mollis metus lectus quis nibh.</p>
-											<button onclick="plantIframe(1);">Planta 1</button>
-<button onclick="plantIframe(2);">Planta 2</button>
-<button onclick="graphIframe('ph');">pH</button>
+
 <button onclick="graphIframe('temp');">Temperatura</button>
+<button onclick="graphIframe('temp_amb');">Temperatura ambiente</button>
 <button onclick="graphIframe('humidity');">Humedad</button>
+<button onclick="graphIframe('humidity_amb');">Humedad ambiente</button>
+<button onclick="graphIframe('temp');">Galeria de fotos</button>
 <button onclick="reloadIframe();">Recargar</button>
 <h1>Esto es un titulo</h1>
 <p>Esto es un parrafo.</p>
@@ -345,55 +346,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	frameborder="0" width="100%" >
 	</iframe>
 </div>
-<div id="contenedor2">
-	<iframe name='Frame2' id='a0' height="600" src=""
-	marginwidth="0" marginheight="0" name="ventana_iframe" scrolling="no" border="0"
-	frameborder="0" width="100%" >
-	</iframe>
-</div>
-<div id="contenedor3">
-	<iframe name='Frame3' id='a0' height="600" src=""
-	marginwidth="0" marginheight="0" name="ventana_iframe" scrolling="no" border="0"
-	frameborder="0" width="100%" >
-	</iframe>
-</div>
 <script>
-var graph="/prueva/ph.php";
+var graph="php/temp.php";
 var type="?planta=1";
 
-  function plantIframe(number) {
-    switch(number) {
-    case 1:
-        var ifr = document.getElementsByName('Frame1')[0];
-        type="?planta=1";
-        ifr.src = graph+type;
-        break;
-    case 2:
-        var ifr = document.getElementsByName('Frame1')[0];
-        type="?planta=2";
-        ifr.src = graph+type;
-        break;
-    default:
-        var ifr = document.getElementsByName('Frame1')[0];
-        ifr.src = graph+type;
-        }
-
-  }
   function graphIframe(n) {
     switch(n) {
-    case 'ph':
+    case 'temp_amb':
         var ifr = document.getElementsByName('Frame1')[0];
-        graph="ph.php";
+        graph="php/temp_amb.php";
         ifr.src = graph+type;
         break;
     case 'temp':
-        var ifr = document.getElementsByName('Frame2')[0];
-        graph="temp.php";
+        var ifr = document.getElementsByName('Frame1')[0];
+        graph="php/temp.php";
         ifr.src = graph+type;
         break;
     case 'humidity':
-        var ifr = document.getElementsByName('Frame3')[0];
-        graph="humidity.php";
+        var ifr = document.getElementsByName('Frame1')[0];
+        graph="php/humidity.php";
+        ifr.src = graph+type;
+        break;
+    case 'humidity_amb':
+        var ifr = document.getElementsByName('Frame1')[0];
+        graph="php/humidity_amb.php";
         ifr.src = graph+type;
         break;
     default:

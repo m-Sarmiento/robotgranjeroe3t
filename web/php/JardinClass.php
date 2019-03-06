@@ -6,8 +6,8 @@ class JardinTable{
     //Función que crea y devuelve un objeto de conexión a la base de datos y chequea el estado de la misma.
     function conectarBD(){
             $server = "localhost";
-            $usuario = "1143405";
-            $pass = "123qweasd";
+            $usuario = "root";//"1143405";
+            $pass = "";//"123qweasd";
             $BD = "1143405";
             //variable que guarda la conexión de la base de datos
             $conexion = mysqli_connect($server, $usuario, $pass, $BD);
@@ -64,7 +64,7 @@ class JardinTable{
         //obtenemos el array con toda la información
         return $this->getArraySQL($sql);
     }
-	
+
 	function getHumidityAmbInfo($p){
         //Creamos la consulta
         $sql = "SELECT id,time,humidity_amb, FROM jardin_2 WHERE plant=$p;";
@@ -85,7 +85,7 @@ class JardinTable{
         //obtenemos el array con toda la información
         return $this->getArraySQL($sql);
     }
-	
+
     function getImgInfo($p){
         //Creamos la consulta
         $sql = "SELECT id,time,photo FROM jardin WHERE plant=$p;";
