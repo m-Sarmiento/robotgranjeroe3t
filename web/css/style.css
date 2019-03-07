@@ -12,7 +12,7 @@ body {
 	margin: 0;
 	font-size: 100%;
 	font-family: 'Open Sans', sans-serif;
-	background: #fff;
+	background:#fff;
 }
 
 body a {
@@ -90,7 +90,7 @@ address {
 	-webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.25);
 	box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.25);
-	background: #fff;
+	background: #008000;
 }
 
 .btn-style {
@@ -136,7 +136,7 @@ h4.tittle-w3-agileits {
 /*-- profile details --*/
 
 .profile-bg {
-	border: 1px solid #5d7cf7;
+	border: 1px solid #008000;
 	border-left: none;
 	border-right: none;
 	background: url(../images/menu1.jpg)no-repeat 0px 0px;
