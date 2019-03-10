@@ -53,21 +53,7 @@ class JardinTable{
 
     function getPlantInfo($p){
         //Creamos la consulta
-        $sql = "SELECT id,time,temp,temp_amb,humidity,humidity_amb FROM jardin_2 WHERE plant=$p;";
-        //obtenemos el array con toda la información
-        return $this->getArraySQL($sql);
-    }
-
-    function getHumidityInfo($p){
-        //Creamos la consulta
-        $sql = "SELECT id,time,humidity, FROM jardin_2 WHERE plant=$p;";
-        //obtenemos el array con toda la información
-        return $this->getArraySQL($sql);
-    }
-
-	function getHumidityAmbInfo($p){
-        //Creamos la consulta
-        $sql = "SELECT id,time,humidity_amb, FROM jardin_2 WHERE plant=$p;";
+        $sql = "SELECT id,time,temp,temp_amb,humidity,humidity_amb,grow,mellowing FROM jardin_2 WHERE plant=$p;";
         //obtenemos el array con toda la información
         return $this->getArraySQL($sql);
     }
@@ -82,6 +68,34 @@ class JardinTable{
 	function getTempAmbInfo($p){
         //Creamos la consulta
         $sql = "SELECT id,time,temp_amb FROM jardin_2 WHERE plant=$p;";
+        //obtenemos el array con toda la información
+        return $this->getArraySQL($sql);
+    }
+
+    function getHumidityInfo($p){
+        //Creamos la consulta
+        $sql = "SELECT id,time,humidity FROM jardin_2 WHERE plant=$p;";
+        //obtenemos el array con toda la información
+        return $this->getArraySQL($sql);
+    }
+
+    function getGrowInfo($p){
+        //Creamos la consulta
+        $sql = "SELECT id,time,grow FROM jardin_2 WHERE plant=$p;";
+        //obtenemos el array con toda la información
+        return $this->getArraySQL($sql);
+    }
+
+    function getMellowingInfo($p){
+        //Creamos la consulta
+        $sql = "SELECT id,time,mellowing FROM jardin_2 WHERE plant=$p;";
+        //obtenemos el array con toda la información
+        return $this->getArraySQL($sql);
+    }
+
+	function getHumidityAmbInfo($p){
+        //Creamos la consulta
+        $sql = "SELECT id,time,humidity_amb FROM jardin_2 WHERE plant=$p;";
         //obtenemos el array con toda la información
         return $this->getArraySQL($sql);
     }
