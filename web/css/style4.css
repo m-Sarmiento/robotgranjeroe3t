@@ -36,7 +36,7 @@ a:focus {
     box-shadow: none;
     outline: none !important;
     border: none;
-    background: #FF0000;
+    background: #fff;
 }
 
 .btn-info:focus,
@@ -49,8 +49,8 @@ a:focus {
 .show>.btn-info.dropdown-toggle,
 .btn-info:hover {
     color: #fff;
-    background-color: #e04646;
-    border-color: #f75757;
+    background-color: #fff;
+    border-color: #fff;
 }
 
 .line {
