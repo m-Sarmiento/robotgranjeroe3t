@@ -1,4 +1,4 @@
-<!--Este archivo me permite graficar la humedad de cuarquier planta, selencionando la planta mediante GET-->
+<!--Este archivo me permite graficar la temperatura de cuarquier planta, selencionando la planta mediante GET-->
 <!--TO DO: unidades, idioma, -->
 
 <HTML>
@@ -11,7 +11,7 @@ $rand = new JardinTable();
 //Leemos la planta que se graficara
 $p = $_GET['planta'];
 //obtenemos la información de la tabla Jardin
-$rawdata = $rand->getHumidityInfo($p);
+$rawdata = $rand->getGrowInfo($p);
 //nos creamos dos arrays para almacenar el tiempo y el valorhumedad
 $timeArray;
 $dataArray;
@@ -23,10 +23,10 @@ for($i = 0 ;$i<count($rawdata);$i++){
     $date = new DateTime($t);
     //ALMACENAMOS EL TIMESTAMP EN EL ARRAY
     $timeArray[$i] = $date->getTimestamp()*1000;
-    //$posts[$i+1]= array('t'=>$timeArray[$i],'humidity'=>$dataArray[$i],'plant'=> $p);
 }
+
 ?>
-<div id="contenedor" style="max-width:100%;height:auto;">Su navegador no soporta Javascript</div>
+<div id="contenedor" style="max-width:100%;height:auto;"> Su navegador no soporta Javascript</div>
 <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Importo el archivo Javascript de Highcharts directamente desde su servidor -->
 <script src="http://code.highcharts.com/stock/highstock.js"></script>
@@ -43,7 +43,7 @@ chartCPU1 = new Highcharts.StockChart({
         enabled: false
     },
     title: {
-        text: 'Gráfica Humedad , planta <?php echo $p ?>'
+        text: 'Gráfica Crecimiento, planta <?php echo $p ?>'
     },
     xAxis: {
         type: 'datetime'
@@ -75,7 +75,6 @@ chartCPU1 = new Highcharts.StockChart({
             enabled: false
     }
 });
-
 </script>
 </BODY>
 </html>

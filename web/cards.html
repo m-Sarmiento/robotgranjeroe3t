@@ -347,7 +347,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</iframe>
 </div>
 <script>
-var graph="php/temp.php";
+var graph="php/humidity.php";
 var type="?planta=1";
 
   function graphIframe(n) {
@@ -372,6 +372,16 @@ var type="?planta=1";
         graph="php/humidity_amb.php";
         ifr.src = graph+type;
         break;
+    case 'grow':
+        var ifr = document.getElementsByName('Frame1')[0];
+        graph="php/grow.php";
+        ifr.src = graph+type;
+        break;
+    case 'mellowing':
+            var ifr = document.getElementsByName('Frame1')[0];
+            graph="php/mellowing.php";
+            ifr.src = graph+type;
+            break;
     default:
         var ifr = document.getElementsByName('Frame1')[0];
         ifr.src = graph+type;
