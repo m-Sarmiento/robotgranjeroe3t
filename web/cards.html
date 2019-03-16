@@ -37,12 +37,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--// Nav Css -->
     <!-- Fontawesome Css -->
     <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--// Fontawesome Css -->
     <!--// Style-sheets -->
 
     <!--web-fonts-->
     <link href="//fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <!--                         my imports--web-fonts-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/botones.css">
     <!--//web-fonts-->
 </head>
 
@@ -332,12 +336,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 purus id tempor. Ut non volutpat libero.Donec pellentesque, mi id rhoncus
                                                 sagittis, ipsum augue vehicula elit, nec mollis metus lectus quis nibh.</p>
 
-<button onclick="graphIframe('temp');">Temperatura</button>
-<button onclick="graphIframe('temp_amb');">Temperatura ambiente</button>
-<button onclick="graphIframe('humidity');">Humedad</button>
-<button onclick="graphIframe('humidity_amb');">Humedad ambiente</button>
-<button onclick="graphIframe('temp');">Galeria de fotos</button>
-<button onclick="reloadIframe();">Recargar</button>
+<button class="btn" onclick="graphIframe('temp');"><i class="fa fa-home"></i>Temperatura</button>
+<button class="btn" onclick="graphIframe('temp_amb');">Temperatura ambiente</button>
+<button class="btn" onclick="graphIframe('humidity');">Humedad</button>
+<button class="btn" onclick="graphIframe('humidity_amb');">Humedad ambiente</button>
+<button class="btn" onclick="graphIframe('temp');">Galeria de fotos</button>
+<button class="btn" onclick="graphIframe('grow');">Crecimiento</button>
+<button class="btn" onclick="graphIframe('mellowing');">Maduracion</button>
+<button class="btn" onclick="reloadIframe();">Recargar</button>
+<button class="btn"><i class="fa fa-home"></i> Home</button>
+<button class="btn"><i class="fa fa-bars"></i> Menu</button>
+<button class="btn"><i class="fa fa-trash"></i> Trash</button>
+<button class="btn"><i class="fa fa-close"></i> Close</button>
+<button class="btn"><i class="fa fa-folder"></i> Folder</button>
 <h1>Esto es un titulo</h1>
 <p>Esto es un parrafo.</p>
 <div id="contenedor1">

@@ -1,0 +1,134 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Modernize an Admin Panel Category Bootstrap Responsive Web Template | Cards :: w3layouts</title>
+    <!-- Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Modernize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta Tags -->
+
+    <!-- Style-sheets -->
+    <!-- Bootstrap Css -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Bootstrap Css -->
+    <!-- Common Css -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!--// Common Css -->
+    <!-- Nav Css -->
+    <link rel="stylesheet" href="css/style4.css">
+    <!--// Nav Css -->
+    <!-- Fontawesome Css -->
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--// Fontawesome Css -->
+    <!--// Style-sheets -->
+
+    <!--web-fonts-->
+    <link href="//fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+
+    <!--                         my imports--web-fonts-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/botones.css">
+    <!--//web-fonts-->
+</head>
+
+<body>
+  <div class="modal-body">
+      <img class="card-img-top" src="images/1.jpg" alt="Card image cap">
+      <p class="paragraph-agileits-w3layouts my-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla ornare
+          purus id tempor. Ut non volutpat libero.Donec pellentesque, mi id rhoncus
+          sagittis, ipsum augue vehicula elit, nec mollis metus lectus quis nibh.</p>
+
+<button class="btn" onclick="graphIframe('temp');"><i class="fa fa-home"></i>Temperatura</button>
+<button class="btn" onclick="graphIframe('temp_amb');">Temperatura ambiente</button>
+<button class="btn" onclick="graphIframe('humidity');">Humedad</button>
+<button class="btn" onclick="graphIframe('humidity_amb');">Humedad ambiente</button>
+<button class="btn" onclick="graphIframe('temp');">Galeria de fotos</button>
+<button class="btn" onclick="graphIframe('grow');">Crecimiento</button>
+<button class="btn" onclick="graphIframe('mellowing');">Maduracion</button>
+<button class="btn" onclick="reloadIframe();">Recargar</button>
+<button class="btn"><i class="fa fa-home"></i> Home</button>
+<button class="btn"><i class="fa fa-bars"></i> Menu</button>
+<button class="btn"><i class="fa fa-trash"></i> Trash</button>
+<button class="btn"><i class="fa fa-close"></i> Close</button>
+<button class="btn"><i class="fa fa-folder"></i> Folder</button>
+<h1>Esto es un titulo</h1>
+<p>Esto es un parrafo.</p>
+<div id="contenedor1">
+<iframe name='Frame1' id='a0' height="600" src=""
+marginwidth="0" marginheight="0" name="ventana_iframe" scrolling="no" border="0"
+frameborder="0" width="100%" >
+</iframe>
+</div>
+<script>
+var graph="php/humidity.php";
+var type="?planta=1";
+
+function graphIframe(n) {
+switch(n) {
+case 'temp_amb':
+var ifr = document.getElementsByName('Frame1')[0];
+graph="php/temp_amb.php";
+ifr.src = graph+type;
+break;
+case 'temp':
+var ifr = document.getElementsByName('Frame1')[0];
+graph="php/temp.php";
+ifr.src = graph+type;
+break;
+case 'humidity':
+var ifr = document.getElementsByName('Frame1')[0];
+graph="php/humidity.php";
+ifr.src = graph+type;
+break;
+case 'humidity_amb':
+var ifr = document.getElementsByName('Frame1')[0];
+graph="php/humidity_amb.php";
+ifr.src = graph+type;
+break;
+case 'grow':
+var ifr = document.getElementsByName('Frame1')[0];
+graph="php/grow.php";
+ifr.src = graph+type;
+break;
+case 'mellowing':
+var ifr = document.getElementsByName('Frame1')[0];
+graph="php/mellowing.php";
+ifr.src = graph+type;
+break;
+default:
+var ifr = document.getElementsByName('Frame1')[0];
+ifr.src = graph+type;
+}
+}
+function reloadIframe() {
+var ifr = document.getElementsByName('Frame1')[0];
+ifr.src = graph+type;
+}
+</script>
+<noscript>Tu navegador no soporta Javascript por lo que no podras ver las graficas. Puedes descargar todos los datos del servidor.
+<a href="d_all.php?type=json">Descargar como json </a>
+<a href="d_all.php?type=csv"> Descargar como csv</a>
+</noscript>
+  </div>
+</body>
+
+</html>
