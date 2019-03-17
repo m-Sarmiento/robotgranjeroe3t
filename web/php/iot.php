@@ -3,7 +3,7 @@
     //este programa lee la informacion envia por POST al servidor   TO DO: validar que la informacion cumpla requistors minimos, revisar origen de la informacion
     // Importamos la configuración
     require("config.php");
-    // Leemos los valores que nos llegan por GET
+    // Leemos los valores que nos llegan por post
     $time = mysqli_real_escape_string($con, $_POST['time']);
     $temp = mysqli_real_escape_string($con, $_POST['temp']);
 	$temp_amb = mysqli_real_escape_string($con, $_POST['temp_amb']);
