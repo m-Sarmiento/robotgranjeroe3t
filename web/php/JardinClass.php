@@ -102,7 +102,7 @@ class JardinTable{
 
     function getImgInfo($p){
         //Creamos la consulta
-        $sql = "SELECT id,time,photo FROM jardin WHERE plant=$p;";
+        $sql = "SELECT id,time,photo FROM jardin_2 WHERE plant=$p;";
         //obtenemos el array con toda la información
         return $this->getArraySQL($sql);
     }

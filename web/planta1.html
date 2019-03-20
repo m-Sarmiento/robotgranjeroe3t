@@ -190,7 +190,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <button class="btn" onclick="graphIframe('temp_amb');">Temperatura ambiente</button>
         <button class="btn" onclick="graphIframe('humidity');">Humedad</button>
         <button class="btn" onclick="graphIframe('humidity_amb');">Humedad ambiente</button>
-        <button class="btn" onclick="graphIframe('temp');">Galeria de fotos</button>
+        <button class="btn" onclick="graphIframe('img');">Galeria de fotos</button>
         <button class="btn" onclick="graphIframe('grow');">Crecimiento</button>
         <button class="btn" onclick="graphIframe('mellowing');">Maduracion</button>
         <button class="btn" onclick="reloadIframe();">Recargar</button>
@@ -202,6 +202,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           frameborder="0" width="100%" >
           </iframe>
         </div>
+        <script type="text/javascript">
+        		function cambia(val){
+            alert("Hello! I am an alert box!!");
+        		var nodos = document.getElementById(val);
+        		var atributo = nodos.attributes.getNamedItem("src").nodeValue;
+        		var elementorecibe = document.getElementsById("espacioImagen");
+        		elementorecibe.setAttribute("src",atributo)
+        		}
+        	</script>
         <script>
           var graph="php/humidity.php";
           var type="?planta=1";
@@ -238,6 +247,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           graph="php/mellowing.php";
           ifr.src = graph+type;
           break;
+		  case 'img':
+          var ifr = document.getElementsByName('Frame1')[0];
+          graph="php/galeria.php";
+          ifr.src = graph+type;
+          break;
           default:
           var ifr = document.getElementsByName('Frame1')[0];
           ifr.src = graph+type;
@@ -248,6 +262,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           ifr.src = graph+type;
           }
         </script>
+
         <noscript>Tu navegador no soporta Javascript por lo que no podras ver las graficas. Puedes descargar todos los datos del servidor.
         <a href="d_all.php?type=json">Descargar como json </a>
         <a href="d_all.php?type=csv"> Descargar como csv</a>

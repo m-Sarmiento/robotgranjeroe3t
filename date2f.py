@@ -8,7 +8,8 @@ import random
 import datetime
 
 
-ip='robotgranjeroe3t.ueuo.com'	
+##ip='robotgranjeroe3t.ueuo.com'
+ip='10.14.52.135'
 # Valores aleatorios para llenar la base de datos, solo para pruebas
 i=1
 x=random.uniform(1,255)
@@ -19,12 +20,15 @@ st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')	#conviert
 p = 1 ## numero de la planta
 print(str(ts))
 	##convencion
-		##t tiempo formato texto '%Y-%m-%d %H:%M:%S'
-		#ph valor del ph double
-		#humidity valor humedad double
-		#temp valor de la temperatura double
-		#img ruta de la imagen texto '/img%n.jpg'			TO DO: servidor FTP en rasperi para enviar las imagenes (comunicaciones)
-		#plant numero de la planta en la parcela int 		TO DO: actualizar base de datos con los nuevos requisitos
-r = requests.post('http://'+ip+'/prueva/iot.php',data = {'t':st,'ph':round(x,2),'humidity':round(x2,2),'temp':round(x/2 - x2,2),'img':'/img'+str(i)+'.jpg','plant':p})
+		##time tiempo formato texto '%Y-%m-%d %H:%M:%S'
+		#temp valor del temp float
+                #temp_amb valor del temp float
+		#humidity valor humedad float
+                #humidity_amb valor humedad ambiente float
+		#grow valor de la cresimiento int
+                #mellowing valor de la maduracion int                                 			
+		#plant numero de la planta en la parcela int
+                #img nombre d ela imagen de la imagen texto 'tom1.jpg'
+r = requests.post('http://'+ip+'/robotgranjeroe3t/web/php/iot.php',data = {'time':st,'temp':round(x,2),'temp_amb':round(x,2),'humidity':round(x,2),'humidity_amb':round(x2,2),'grow':round(x/2 - x2,2),'mellowing':round(x/2 - x2,2),'photo':str(i)+'.jpg','plant':p})
 print(r.status_code, r.reason)	#revisa el estado de la transmision
 time.sleep(1) #espera 1 segundo
