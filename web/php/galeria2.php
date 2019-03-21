@@ -6,10 +6,9 @@
 
 <meta charset="utf-8">
 
-<script type="text/javascript" src="../js/prototype.js"></script>
-<script type="text/javascript" src="../js/scriptaculous.js?load=effects"></script>
-<script type="text/javascript" src="../js/lightwindow.js"></script>
-<link rel="stylesheet" href="../css/lightwindow.css" type="text/css" media="screen" />
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.fancybox.js"></script>
+<link rel="stylesheet" href="../css/jquery.fancybox.css" type="text/css" media="screen" />
 			<div class="gallery" align="center" id="contenedor" style="max-width:100%;height:auto;">
 				<?php
 				require_once("JardinClass.php");
@@ -47,9 +46,17 @@
 					//$imageThumbURL = 'uploads/thumb/'.$dataArray[$i];
 					$imageURL = '../uploads/'.$dataArray[$i];
 				?>
-					<a href="<?php echo $imageURL; ?>" class="lightwindow" title="Imagen <?php echo $i+1; ?>" caption="Fecha de la imagen: <?php echo date('Y-m-d H:i:s',$timeArray[$i]); ?>"><img src="<?php echo $imageURL; ?>" id="<?php echo $i; ?>" value="<?php echo $i; ?>" class="imagenGaleria" alt="<?php echo $	$timeArray[$i]; ?>" /></a>
+					<a href="<?php echo $imageURL; ?>" class="fancybox" data-fancybox-group="gallery" caption="Imagen <?php echo $i+1; ?>" title="Fecha de la imagen: <?php echo date('Y-m-d H:i:s',$timeArray[$i]); ?>">
+						<img src="<?php echo $imageURL; ?>" id="<?php echo $i; ?>" value="<?php echo $i; ?>" class="imagenGaleria" alt="<?php echo $	$timeArray[$i]; ?>" />
+
+					</a>
 				<?php }
 				 ?>
 			</div>
+			<script>
+			$().ready(function(){
+				$('.fancybox').fancybox({keyboard:true});
+			}	);
+			</script>
 </BODY>
 </html>
