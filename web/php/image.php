@@ -1,6 +1,6 @@
 <?php
 
-$uploaddir = 'uploads/';
+$uploaddir = '../uploads/';
 $uploadfile = $uploaddir . basename($_FILES['media']['name']);
 var_dump($_FILES);
 echo "<p>";

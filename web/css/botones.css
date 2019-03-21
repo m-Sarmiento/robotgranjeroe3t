@@ -1,16 +1,19 @@
-.btn {
-  background-color: DodgerBlue;
-  display:inline-block;
-  border: none;
-  color: white;
-  /*padding: 12px 16px;*/
-  font-size: 16px;
+.btn1 {
+  border-color: #25BCD9;
+  border-width: 5px;
+  border-radius: 10px;
+  color: #25BCD9;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
   cursor: pointer;
+  background-color: white;
 }
 
 /* Darker background on mouse-over */
-.btn:hover {
-  background-color: RoyalBlue;
+.btn1:hover {
+  background-color: #98CC07;
+  color: white;
   }
 
   a.button4{
@@ -32,3 +35,4 @@
   a.button4:hover{
    background-color: RoyalBlue;
   }
+
