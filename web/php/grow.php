@@ -22,7 +22,7 @@ for($i = 0 ;$i<count($rawdata);$i++){
     $dataArray[$i]=$rawdata[$i][2];
     $date = new DateTime($t);
     //ALMACENAMOS EL TIMESTAMP EN EL ARRAY
-    $timeArray[$i] = $date->getTimestamp()*1000;
+    $timeArray[$i] = $date->getTimestamp()*1000+2*3600000;
 }
 
 ?>

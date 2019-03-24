@@ -8,8 +8,8 @@ import random
 import datetime
 
 
-##ip='robotgranjeroe3t.ueuo.com'
-ip='10.14.52.135'
+ip='robotgranjeroe3t.ueuo.com'
+##ip='10.14.52.135'
 # Valores aleatorios para llenar la base de datos, solo para pruebas
 i=1
 x=random.uniform(1,255)
@@ -29,6 +29,6 @@ print(str(ts))
                 #mellowing valor de la maduracion int                                 			
 		#plant numero de la planta en la parcela int
                 #img nombre d ela imagen de la imagen texto 'tom1.jpg'
-r = requests.post('http://'+ip+'/robotgranjeroe3t/web/php/iot.php',data = {'time':st,'temp':round(x,2),'temp_amb':round(x,2),'humidity':round(x,2),'humidity_amb':round(x2,2),'grow':round(x/2 - x2,2),'mellowing':round(x/2 - x2,2),'photo':str(i)+'.jpg','plant':p})
+r = requests.post('http://'+ip+'/web/php/iot.php',data = {'time':st,'temp':round(x,2),'temp_amb':round(x,2),'humidity':round(x,2),'humidity_amb':round(x2,2),'grow':round(22),'mellowing':round(23),'photo':str(i)+'.jpg','plant':p})
 print(r.status_code, r.reason)	#revisa el estado de la transmision
 time.sleep(1) #espera 1 segundo

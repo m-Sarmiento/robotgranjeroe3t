@@ -9,10 +9,12 @@
 	$temp_amb = mysqli_real_escape_string($con, $_POST['temp_amb']);
     $humidity = mysqli_real_escape_string($con, $_POST['humidity']);
 	$humidity_amb = mysqli_real_escape_string($con, $_POST['humidity_amb']);
+    $grow= mysqli_real_escape_string($con, $_POST['grow']);
+	$mellowing= mysqli_real_escape_string($con, $_POST['mellowing']);
     $plant = mysqli_real_escape_string($con, $_POST['plant']);
 	$photo = mysqli_real_escape_string($con, $_POST['photo']);
     // Esta es la instrucción para insertar los valores
-    $query = "INSERT INTO jardin_2 (time,temp,temp_amb,humidity,humidity_amb,plant,photo) VALUES('".$time."','".$temp."','".$temp_amb."','".$humidity."','".$humidity_amb."','".$plant."','".$photo."');";
+    $query = "INSERT INTO jardin_2 (time,temp,temp_amb,humidity,humidity_amb,grow,mellowing,plant,photo) VALUES('".$time."','".$temp."','".$temp_amb."','".$humidity."','".$humidity_amb."','".$grow."','".$mellowing."','".$plant."','".$photo."');";
     mysqli_query($con, $query);
     mysqli_close($con);
 ?>
